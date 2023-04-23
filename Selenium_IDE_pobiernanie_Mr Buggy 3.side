@@ -1,0 +1,84 @@
+{
+  "id": "2e4274a0-b709-4284-afba-4f59e3b56709",
+  "version": "2.0",
+  "name": "Mr Buggy 3",
+  "url": "http://mrbuggy.pl",
+  "tests": [{
+    "id": "c1ba46ff-9962-4d56-8ac3-b2cc7daad6ad",
+    "name": "Pobieranie Mr Buggy 3",
+    "commands": [{
+      "id": "4e21f54e-cb03-4ea3-acfb-a77c0602fb19",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03ab1524-9825-4059-8349-33c8dc19d641",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6858dba6-5096-4b4c-819c-65f027396e9f",
+      "comment": "",
+      "command": "click",
+      "target": "css=span",
+      "targets": [
+        ["css=span", "css:finder"],
+        ["xpath=//div[@id='container']/button/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Trigger')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6713a193-8194-4ef4-ae0e-042c4aa0cd55",
+      "comment": "",
+      "command": "click",
+      "target": "css=.boxBuggy-R",
+      "targets": [
+        ["css=.boxBuggy-R", "css:finder"],
+        ["xpath=//div[@id='container']/article/div/div/a[3]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://mrbuggy.pl/mrbuggy3/']", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8110",
+      "windowTimeout": 2000
+    }, {
+      "id": "c11577c8-8f83-4a3b-936f-40e86e54809f",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win8110}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a26967c-bc64-40a6-8a1f-20ec464a5a9e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=POBIERZ",
+      "targets": [
+        ["linkText=POBIERZ", "linkText"],
+        ["css=.button_download", "css:finder"],
+        ["xpath=//a[contains(text(),'POBIERZ')]", "xpath:link"],
+        ["xpath=//div[@id='container']/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.dropbox.com/s/wd02vbbeajav9ol/MrBuggy3%201.2.0.146.exe?dl=1')])[2]", "xpath:href"],
+        ["xpath=//div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'POBIERZ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "eac0f730-f252-4e30-a033-b26e5ca1cdb6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c1ba46ff-9962-4d56-8ac3-b2cc7daad6ad"]
+  }],
+  "urls": ["http://mrbuggy.pl/"],
+  "plugins": []
+}
